@@ -26,23 +26,24 @@ void counting_sort(int *array, size_t size)
 		free(output);
 		return;
 	}
-	for (j = 0; j < (max + 1); j++)
+	for (j = 0; j <= max; j++)
 		count[j] = 0;
 	for (i = 0; i < size; i++)
 	{ count[array[i]] += 1; }
 	j = 1;
 	while (j <= max)
 	{
-		count[j] = count[j] + count[j - 1];
+		count[j] += + count[j - 1];
 		j++;
 	}
 	print_array(count, (max + 1));
 	for (i = 0; i < size; i++)
 	{
-		output[count[array[i]]] = array[i];
+		output[count[array[i]] - 1] = array[i];
 		count[array[i]] = count[array[i]] - 1;
 	}
 	for (i = 0; i < size; i++)
 		array[i] = output[i];
 	free(output);
+	free(count);
 }
