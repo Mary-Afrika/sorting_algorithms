@@ -33,7 +33,7 @@ void counting_sort(int *array, size_t size)
 	j = 1;
 	while (j <= max)
 	{
-		count[j] += + count[j - 1];
+		count[j] += count[j - 1];
 		j++;
 	}
 	print_array(count, (max + 1));
