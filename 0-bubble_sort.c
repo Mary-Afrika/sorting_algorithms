@@ -29,10 +29,10 @@ void bubble_sort(int *array, size_t size)
 	int temp;
 	int did_swap;
 
-	if (array == NULL || size == 0 || size == 1)
+	if (array == NULL || size < 2)
 		return;
 
-	for (c = 0; c  < size - 1; c++)
+	for (c = 0; c  < size; c++)
 	{
 		did_swap = 0;
 		for (i = 0; i < size - c - 1; i++)
