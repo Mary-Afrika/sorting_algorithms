@@ -35,7 +35,6 @@ void print_list(const listint_t *list);
 void cocktail_sort_list(listint_t **list);
 void swap_nodes(listint_t **list, listint_t *a, listint_t *b);
 void recursion(int *partial, int *array, size_t start, size_t end);
-void heapify(int *array, size_t size, size_t base,size_t root);
+void heapify(int *array, size_t size, size_t base, size_t root);
 void merge(int *partial, int *array, size_t start, size_t mid, size_t end);
-void heapify(int *array, size_t size, size_t base,size_t root);
 #endif
